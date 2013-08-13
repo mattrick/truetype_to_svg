@@ -152,3 +152,6 @@ auto-find fonts on linux, not require cmdline fontname?
 
 accept U+4034 (hex) input format
 
+regression test
+
+
