@@ -5,8 +5,10 @@ Render truetype font as SVG path, using the Freetype library
 
 ### Current Status
 
-Currently this project consists of a C++ language header that can used in 
-conjuction with the Freetype library to create a basic conversion program.
+Currently this project consists of a C++ language header that can used 
+in conjuction with the Freetype library to create a basic conversion 
+program that will extract a single character from a .ttf file and create 
+a matching .svg file.
 
 The program is stable for basic use, but there are some bugs with 
 bounding boxes. Also calculation of the SVG "g" tag has some issues with
