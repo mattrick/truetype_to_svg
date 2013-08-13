@@ -3,6 +3,14 @@ truetype_to_svg
 
 Render truetype font as SVG path, using the Freetype library
 
+### Current Status
+
+Currently this project consists of a C++ language header that can used in 
+conjuction with the Freetype library to create a basic conversion program.
+
+The program is stable for basic use, but there are some bugs with 
+bounding boxes.
+
 ### Using in your own C++ project
 
     #include <truetype_to_svg.hpp>
@@ -15,6 +23,7 @@ Render truetype font as SVG path, using the Freetype library
 
 ### Build and run:
 
+    # BSD/Linux - 
     # install freetype using your package manager
     # (something like sudo apt-get install libfreetype6-dev)
     # then copy a .ttf file to this directory for convenience
@@ -25,12 +34,12 @@ Render truetype font as SVG path, using the Freetype library
 
 ### Details on running examples
 
-When we ran this,
+The first argument is a truetype font, the second is a Unicode codepoint.
+For example:
 
     ./test1 ./FreeSerif.ttf 66 > /tmp/x.svg 
 
-66 = unicode for 'B'. you can use any number here. (note that the first 
-part of ASCII is the same as unicode so ASCII codes work too)
+66 = unicode (and ASCII) for 'B'. you can use any number here.
 
 You can use hex as well. For example, Cherokee Letter O:
 
@@ -106,14 +115,14 @@ by the SVG viewer program.
 
 Please see these sites for more info.
 
-Basic Terms: http://www.freetype.org/freetype2/docs/glyphs/glyphs-3.html
-FType + outlines: http://www.freetype.org/freetype2/docs/reference/ft2-outline_processing.html
-FType + contours: http://www.freetype.org/freetype2/docs/glyphs/glyphs-6.html
-TType contours: https://developer.apple.com/fonts/TTRefMan/RM01/Chap1.html
-TType contours2: http://www.truetype-typography.com/ttoutln.htm
-Non-zero winding rule: http://en.wikipedia.org/wiki/Nonzero-rule
-SVG paths: http://www.w3schools.com/svg/svg_path.asp
-SVG paths + nonzero: http://www.w3.org/TR/SVG/painting.html#FillProperties
+ * Basic Terms: http://www.freetype.org/freetype2/docs/glyphs/glyphs-3.html
+ * FType + outlines: http://www.freetype.org/freetype2/docs/reference/ft2-outline_processing.html
+ * FType + contours: http://www.freetype.org/freetype2/docs/glyphs/glyphs-6.html
+ * TType contours: https://developer.apple.com/fonts/TTRefMan/RM01/Chap1.html
+ * TType contours2: http://www.truetype-typography.com/ttoutln.htm
+ * Non-zero winding rule: http://en.wikipedia.org/wiki/Nonzero-rule
+ * SVG paths: http://www.w3schools.com/svg/svg_path.asp
+ * SVG paths + nonzero: http://www.w3.org/TR/SVG/painting.html#FillProperties
 
 ### Test characters
 
