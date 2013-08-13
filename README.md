@@ -9,7 +9,8 @@ Currently this project consists of a C++ language header that can used in
 conjuction with the Freetype library to create a basic conversion program.
 
 The program is stable for basic use, but there are some bugs with 
-bounding boxes.
+bounding boxes. Also calculation of the SVG "g" tag has some issues with
+transforms/footers.
 
 ### Using in your own C++ project
 
@@ -149,6 +150,3 @@ auto-find fonts on linux, not require cmdline fontname?
 
 accept U+4034 (hex) input format
 
-### known bugs
-
-will not calculate proper use of '<g>' for varying uses of transform/footer
