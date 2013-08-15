@@ -26,16 +26,15 @@ transforms/footers.
 
 ### Build and run:
 
-    # BSD/Linux - 
-    # install freetype using your package manager
-    # (something like sudo apt-get install libfreetype6-dev)
-    # then copy a .ttf file to this directory for convenience
-    cp `locate FreeSerif.ttf | tail -1 ` .
-    ./build.sh
-    ./test1 ./FreeSerif.ttf 66 > /tmp/x.svg 
-    firefox /tmp/x.svg
+    The build system uses cmake. ( http://www.cmake.org )
+     
+     cmake .
+     make
+     ./example1 test.ttf 66 > out.svg 
+     firefox out.svg
 
-### Details on running examples
+
+### Details on running examples 1 & 2
 
 The first argument is a truetype font, the second is a Unicode codepoint.
 For example:
@@ -53,6 +52,8 @@ To view the resulting svg file, it is easiest to use firefox: type
 Firefox addon that can auto-reload files when they change on disk.
 
 You can also use svg viewers like Inkscape.
+
+Example 3 generates multiple files for an ancient Persian font (Xerxes.ttf)
 
 ### Detail on using in your own projcet
 
@@ -141,6 +142,18 @@ Bearing is messed up on some glyphs
 The "Batik" project does similar stuff. It is Java:
 
 http://xmlgraphics.apache.org/batik/tools/font-converter.html
+
+### Linux non-cmake build
+
+    # BSD/Linux - 
+
+    # install freetype using your package manager
+    # (something like sudo apt-get install libfreetype6-dev)
+    # then copy a .ttf file to this directory for convenience
+    cp `locate FreeSerif.ttf | tail -1 ` .
+    ./build.sh
+    ./test1 ./FreeSerif.ttf 66 > /tmp/x.svg 
+    firefox /tmp/x.svg
 
 ### Todo
 
