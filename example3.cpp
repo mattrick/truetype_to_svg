@@ -1,3 +1,5 @@
+// based on github user ebraminio's code to process Xerxes.ttf into svg
+
 #include <fstream>
 #include "truetype_to_svg.hpp"
 
