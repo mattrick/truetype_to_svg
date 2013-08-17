@@ -150,7 +150,7 @@ public:
 	  debug << "\nNum points: " << ftoutline.n_points;
 	  debug << "\nNum contours: " << ftoutline.n_contours;
 		debug << "  Endpoint indexes:";
-		for ( int i = 0 ; i < ftoutline.n_contours ; i++ ) debug << " " << contours[i];
+		for ( int i = 0 ; i < ftoutline.n_contours ; i++ ) debug << " " << ftoutline.contours[i];
 		debug << "\n-->\n";
 
 		// Invert y coordinates (SVG = neg at top, TType = neg at bottom)
